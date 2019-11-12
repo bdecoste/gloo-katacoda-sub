@@ -1,0 +1,6 @@
+grafana:
+  defaultInstallationEnabled: false
+prometheus:
+  enabled: false
+rateLimit:
+  enabled: false

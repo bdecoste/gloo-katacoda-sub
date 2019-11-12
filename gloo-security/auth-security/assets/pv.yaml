@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-volume-grafana
+  labels:
+    type: local
+spec:
+  storageClassName:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/grafana"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-volume-prometheus
+  labels:
+    type: local
+spec:
+  storageClassName:
+  capacity:
+    storage: 16Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/prometheus"
+
